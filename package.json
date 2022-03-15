@@ -1,0 +1,56 @@
+{
+  "name": "nextjs_starter",
+  "description": "A nextjs starter with redux toolkit and tailwindcss",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "postbuild": "next-sitemap",
+    "lint": "eslint \"**/*.{ts,tsx}\" --fix",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier -w \"**/*.{js,ts,tsx,json}\"",
+    "prepare": "husky install",
+    "pre-commit": "npm run typecheck && lint-staged"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "eslint \"**/*.{ts,tsx}\" --fix",
+      "prettier -w \"**/*.{js,ts,tsx,json}\""
+    ]
+  },
+  "dependencies": {
+    "@heroicons/react": "^1.0.6",
+    "@reduxjs/toolkit": "^1.8.0",
+    "axios": "^0.26.1",
+    "next": "12.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-redux": "^7.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.21",
+    "@types/react": "17.0.39",
+    "autoprefixer": "^10.4.2",
+    "eslint": "8.10.0",
+    "eslint-config-next": "12.1.0",
+    "postcss": "^8.4.8",
+    "tailwindcss": "^3.0.23",
+    "typescript": "4.6.2",
+    "@next/eslint-plugin-next": "^12.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-sonarjs": "^0.11.0",
+    "eslint-plugin-unicorn": "^40.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.7",
+    "prettier": "^2.5.1"
+  }
+}
